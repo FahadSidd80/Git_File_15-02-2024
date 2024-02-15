@@ -1,0 +1,138 @@
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git remote add origin git@github.com:FahadSidd80/Git-Tutorials.git
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git push -u origin master
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git push -u origin master
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git config user.email
+fahadsid8026@gmail.com
+
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ ssh-keygen -t ed25519 -C "fahadsid8026@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/2101917/.ssh/id_ed25519): GitsshKeyEnter passphrase (empty for no passphrase):
+Enter same passphrase again:                                                                                             y
+Unable to save public key to Gitss\033[D\033[D\033[A\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[C\033[Cy.pub: File name too long
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ ssh-keygen -t ed25519 -C "fahadsid8026@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/2101917/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/2101917/.ssh/id_ed25519
+Your public key has been saved in /c/Users/2101917/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:Ks2NSLyvuqvBHKp2AuQQOAmDPhAsW0aSfO2bjBFR7zk fahadsid8026@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|@=..+.           |
+|X=oo ..          |
+|+*. o  .         |
+|o+ o .. .        |
+|+.. * oES        |
+|=..o O +.        |
+|+o  + = .        |
+|.+ . o           |
+|+.*+...          |
++----[SHA256]-----+
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ eval "$(ssh-agent -s)"
+Agent pid 235
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ ssh-add ~/.ssh/id_ed25519
+Identity added: /c/Users/2101917/.ssh/id_ed25519 (fahadsid8026@gmail.com)
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ clip < ~/.ssh/id_ed25519.pub
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (8/8), 626 bytes | 69.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:FahadSidd80/Git-Tutorials.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util.txt.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "Gitss\357\200\233[D\357\200\233[D\357\200\233[A\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[Cy"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git add .
+error: open("Gitss[D[D[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cy"): Filename too long
+error: unable to index file 'Gitss[D[D[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cy'
+fatal: adding files failed
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   util.txt.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "Gitss\357\200\233[D\357\200\233[D\357\200\233[A\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[C\357\200\233[Cy"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$ git add .
+error: open("Gitss[D[D[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cy"): Filename too long
+error: unable to index file 'Gitss[D[D[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cy'
+fatal: adding files failed
+
+CTS+2101917@LTIN254607 MINGW64 ~/OneDrive - Cognizant/Desktop/First Git Repo (master)
+$
